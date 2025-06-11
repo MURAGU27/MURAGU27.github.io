@@ -14,6 +14,20 @@
       background-color: #f9f9f9;
       color: #333;
     }
+    nav {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
     .container {
       display: flex;
       flex-wrap: wrap;
@@ -49,10 +63,24 @@
     .contact-info p {
       margin: 6px 0;
     }
+    .project, .lab {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 15px;
+      background-color: #fff;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#resume">Resume</a>
+    <a href="#projects">Projects</a>
+    <a href="#labs">Lab Challenges</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container" id="home">
     <div class="left-column">
       <img src="your-photo.jpg" alt="Profile Photo">
       <h3>About Me</h3>
@@ -65,25 +93,25 @@
     </div>
 
     <div class="right-column">
-      <div class="section">
-        <h2>Education</h2>
+      <div class="section" id="resume">
+        <h2>Resume</h2>
+        <h3>Education</h3>
         <ul>
           <li><strong>BBIT</strong> - JKUAT (2021 – 2024)</li>
           <li><strong>Secondary</strong> - Kiriaini Girls (2017 – 2021)</li>
           <li><strong>Primary</strong> - St. Anthony & Emmanuel Springs (2009 – 2016)</li>
         </ul>
-      </div>
-
-      <div class="section">
-        <h2>Experience</h2>
+        <h3>Experience</h3>
         <ul>
           <li><strong>IT Attachment – ICIPE</strong> (Nov 2023 – Jan 2024): Assisted in system operations, database management, web development, and troubleshooting.</li>
           <li><strong>Cashier – Center Max One</strong> (Apr 2024 – Present): Handled transactions, maintained records, and provided customer service.</li>
         </ul>
-      </div>
-
-      <div class="section">
-        <h2>Skills</h2>
+        <h3>Certifications</h3>
+        <ul>
+          <li>Cybersecurity Essentials – Cisco Networking Academy (Expected)</li>
+          <li>Docker for Beginners – Self-Paced Learning</li>
+        </ul>
+        <h3>Skills</h3>
         <ul>
           <li>MySQL, HTML, CSS, JavaScript, PHP</li>
           <li>Docker, Git, Problem Solving</li>
@@ -91,12 +119,53 @@
         </ul>
       </div>
 
-      <div class="section">
-        <h2>References</h2>
-        <ul>
-          <li><strong>Lilian Nyambura</strong><br>Center Max One<br>Tel: 0710 509267<br>Email: liliannyambura0710@gmail.com</li>
-          <li><strong>Glenn Sequeira</strong><br>ICIPE IT Manager<br>Email: gsequeira@icipe.org</li>
-        </ul>
+      <div class="section" id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+          <h4>Bus Ticketing System – Super Metro</h4>
+          <p>Developed a web-based system for booking and managing bus tickets using PHP and MySQL.</p>
+        </div>
+        <div class="project">
+          <h4>Student Attendance Tracker</h4>
+          <p>Created a simple attendance tracking system for schools using PHP and MySQL.</p>
+        </div>
+        <div class="project">
+          <h4>Personal Website</h4>
+          <p>Built a portfolio website to showcase academic and professional work using HTML, CSS, and PHP.</p>
+        </div>
+      </div>
+
+      <div class="section" id="labs">
+        <h2>Lab Challenges</h2>
+        <div class="lab">
+          <h4>Linux SSH Access Challenge</h4>
+          <p><strong>Problem:</strong> Securely connect to a remote server.<br>
+          <strong>Approach:</strong> Used `ssh user@ip` command and practiced file transfer via `scp`.<br>
+          <strong>Tools:</strong> Linux terminal, SSH, SCP.<br>
+          <strong>Lessons:</strong> Learned secure remote access and basic command-line file operations.</p>
+        </div>
+        <div class="lab">
+          <h4>Docker Container Deployment</h4>
+          <p><strong>Problem:</strong> Containerize a web app.<br>
+          <strong>Approach:</strong> Wrote Dockerfile and ran containers with `docker run`.<br>
+          <strong>Tools:</strong> Docker, VS Code.<br>
+          <strong>Lessons:</strong> Understood container lifecycle and volume management.</p>
+        </div>
+        <div class="lab">
+          <h4>SQL Injection Challenge</h4>
+          <p><strong>Problem:</strong> Exploit a vulnerable login form.<br>
+          <strong>Approach:</strong> Used `' OR 1=1 --` injection string.<br>
+          <strong>Tools:</strong> DVWA, Burp Suite.<br>
+          <strong>Lessons:</strong> Learned the importance of input validation and parameterized queries.</p>
+        </div>
+      </div>
+
+      <div class="section" id="contact">
+        <h2>Contact</h2>
+        <p><strong>Phone:</strong> +254712345678</p>
+        <p><strong>Email:</strong> youremail@example.com</p>
+        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/muragu27">github.com/muragu27</a></p>
       </div>
     </div>
   </div>
